@@ -24,10 +24,31 @@ const Banner = () => {
 
   return (
     <div className="bg-gradient-to-r from-[#FFF2F0] to-[#E0F0FF]">
-      <div className="min-h-screen flex items-center max-w-7xl mx-auto gap-10 px-6">
-        <div className="text-left h-full flex-1 flex flex-col justify-center space-y-8">
-          <h1 className="font-bold text-5xl text-gray-500">Hi! I’m</h1>
-          <h1 className="text-7xl font-black ">
+      <div className="min-h-screen md:flex flex-row-reverse items-center max-w-7xl mx-auto gap-10 px-6">
+        <div className="flex-1 relative">
+          <div className="border-white border-2 border-b-0 rounded-t-full w-full px-10 pt-10 bg-transparent">
+            <div className="bg-white w-full border-2 border-white border-b-0 px-10 pt-10 rounded-full bg-radial-[at_50%_75%] from-[#E0F0FF] to-[#fff2f0] ">
+              <img
+                src={portfolio}
+                alt="portfolio"
+                style={floatStyle}
+                className="h-[50%]"
+              />
+            </div>
+          </div>
+          <div className="flex items-center absolute -right-5 top-1/2 -translate-y-1/2 bg-[#ff907f59] p-3 rounded-3xl">
+            <h1 className="text-4xl font-bold text-primary mr-2">2+</h1>
+            <div>
+              <h1 className="font-semibold text-xl">Years</h1>
+              <p>experience</p>
+            </div>
+          </div>
+        </div>
+        <div className="text-left h-full flex-1 flex flex-col justify-center md:space-y-8 space-y-4 mt-5 md:mt-0">
+          <h1 className="font-bold md:text-5xl text-3xl  text-gray-500">
+            Hi! I’m
+          </h1>
+          <h1 className="md:text-7xl text-5xl  font-black ">
             {/* Gradient-filled text */}
             <span className="bg-gradient-to-r from-[#55389F] to-[#D9616A] bg-clip-text text-transparent">
               Fahim
@@ -42,7 +63,7 @@ const Banner = () => {
             </span>
           </h1>
 
-          <h1 className="text-3xl font-bold mt-2 ">
+          <h1 className="md:text-3xl text-2xl font-bold mt-2 ">
             Full-stack <span className="text-blue-700">Web Developer</span>
           </h1>
           <p className="max-w-3xl mx-auto mt-4 text-justify font-semibold text-gray-600">
@@ -103,26 +124,6 @@ const Banner = () => {
             <button className="btn btn-ghost text-error px-5 py-7 text-xl rounded-lg">
               Let's Talk
             </button>
-          </div>
-        </div>
-
-        <div className="flex-1 relative">
-          <div className="border-white border-2 border-b-0 rounded-t-full w-full px-10 pt-10 bg-transparent">
-            <div className="bg-white w-full px-10 pt-10 rounded-full bg-radial-[at_25%_25%] from-[#E0F0FF] to-[#fff2f0] to-75%">
-              <img
-                src={portfolio}
-                alt="portfolio"
-                style={floatStyle}
-                className="h-[50%]"
-              />
-            </div>
-          </div>
-          <div className="flex items-center absolute -right-5 top-1/2 -translate-y-1/2 bg-[#ff907f59] p-3 rounded-3xl">
-            <h1 className="text-4xl font-bold text-primary mr-2">2+</h1>
-            <div>
-              <h1 className="font-semibold text-xl">Years</h1>
-              <p>experience</p>
-            </div>
           </div>
         </div>
       </div>
